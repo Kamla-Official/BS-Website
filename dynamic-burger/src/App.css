@@ -1,0 +1,45 @@
+/* Apply a global reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4; /* Light background */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+main {
+  width: 100%;
+  max-width: 1200px; /* Set a max-width for better content alignment */
+  margin-top: 80px; /* Leave space for the fixed navbar */
+  padding: 2rem;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #ffbf00;
+}
+
+h3 {
+  color: #333;
+}
+
+/* Add a wrapper for the main content */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 2rem;
+}

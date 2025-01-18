@@ -1,0 +1,33 @@
+.home {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(to right, #ffbf00, #ff9e00);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .home h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .home p {
+    font-size: 1.5rem;
+    max-width: 800px;
+  }
+  
+  /* Responsive for smaller screens */
+  @media (max-width: 768px) {
+    .home h1 {
+      font-size: 2.5rem;
+    }
+  
+    .home p {
+      font-size: 1.2rem;
+    }
+  }
+  
