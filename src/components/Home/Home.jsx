@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <div className="home">
       <h1>Welcome to Dynamic Burger</h1>
-      <p>Your roleplay burger paradise!</p>
+      <p>Burger paradise!</p>
       <nav>
         <ul>
           <li><Link to="/menu">Food Menu</Link></li>
