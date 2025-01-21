@@ -1,112 +1,117 @@
-/* Styling the container of the food menu */
+/* Global reset for consistency */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Container for the menu */
 .menu-list {
-  padding: 20px;
-  text-align: center;
   background-color: #f4f4f4;
+  padding: 40px;
+  text-align: center;
+  margin-top: 60px; /* Adds space after the navbar */
 }
 
 h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
+  font-size: 2.5rem;
+  font-weight: 600;
   color: #333;
+  margin-bottom: 30px;
+  text-transform: uppercase;
 }
 
 /* Category Section Styling */
 .category-section {
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
 
 .category-title {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #333;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #e67e22; /* Main color changed to orange */
   text-transform: capitalize;
   margin-bottom: 20px;
 }
 
-/* Styling the food card container */
+/* Food card grid container */
 .menu-cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
   justify-content: center;
-  margin-top: 30px;
 }
 
-/* Styling each individual food card */
+/* Individual Food Card */
 .menu-card {
-  display: flex;
-  flex-direction: column;
   background-color: #fff;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: box-shadow 0.3s ease;
   cursor: pointer;
-  max-width: 300px;
-  margin: 0 auto;
-  height: 400px; /* Set a fixed height for consistency */
+  position: relative;
+  overflow: hidden;
+  max-width: 320px;
+  height: 450px; /* Increased height for better display */
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Ensures even spacing between content */
+  justify-content: center; /* Ensures the text is centered */
+  text-align: center; /* Centers the text */
 }
 
+.menu-card:hover {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Image Styling - Ensures the image fits the box without cropping */
 .menu-img {
   width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-bottom: 3px solid #f4f4f4;
+  height: 250px;
+  object-fit: cover; /* This ensures the image is fully visible and covers the box */
+  border-radius: 8px;
+  margin-bottom: 20px; /* Adds space between the image and text */
 }
 
-/* Food info styling */
+/* Food Info Section */
 .menu-info {
-  padding: 20px;
-  flex-grow: 1; /* Allows the content to grow and fill space */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  padding-top: 15px;
+  text-align: center; /* Center the text in the info section */
 }
 
 .menu-info h3 {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #333;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #34495e;
   margin-bottom: 10px;
 }
 
 .category {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-style: italic;
-  color: #666;
+  color: #7f8c8d;
   margin-bottom: 10px;
 }
 
 .description {
   font-size: 1rem;
-  color: #777;
-  line-height: 1.5;
-  margin-top: 10px;
-  overflow: hidden; /* Prevents text overflow */
-  text-overflow: ellipsis; /* Adds '...' if text is too long */
-  display: -webkit-box;
-  -webkit-line-clamp: 3; /* Limits the description to 3 lines */
-  -webkit-box-orient: vertical;
+  color: #95a5a6;
+  margin-bottom: 15px;
+  line-height: 1.4;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .price {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: bold;
-  color: #e74c3c;
-  margin-top: 15px;
+  color: #e67e22; /* Main color changed to orange */
+  margin-bottom: 20px;
 }
 
-/* Hover effect for the card */
-.menu-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-/* Responsive Design */
+/* Responsive Design for smaller screens */
 @media (max-width: 1024px) {
   .menu-cards {
     grid-template-columns: repeat(2, 1fr);
@@ -115,6 +120,6 @@ h2 {
 
 @media (max-width: 768px) {
   .menu-cards {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 1fr;
   }
 }

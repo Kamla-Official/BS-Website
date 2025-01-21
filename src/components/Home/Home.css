@@ -1,33 +1,124 @@
+/* General Styles */
 .home {
-    height: 100vh;
-    width: 100%;
-    background: linear-gradient(to right, #ffbf00, #ff9e00);
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  
-  .home h1 {
-    font-size: 3.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  .home p {
-    font-size: 1.5rem;
-    max-width: 800px;
-  }
-  
-  /* Responsive for smaller screens */
-  @media (max-width: 768px) {
-    .home h1 {
-      font-size: 2.5rem;
-    }
-  
-    .home p {
-      font-size: 1.2rem;
-    }
-  }
-  
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+}
+
+/* Hero Section */
+.hero-section {
+  background: url("https://via.placeholder.com/1920x600") no-repeat center center/cover;
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.hero-section .hero-content {
+  max-width: 800px;
+  margin: auto;
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.hero-section p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  color: white;
+  background-color: #ff5733;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #c43d20;
+}
+
+/* Team Showcase */
+.team-showcase {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.team-showcase h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.team-images {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.team-images img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.team-images img:hover {
+  transform: scale(1.05);
+}
+
+/* Business Showcase */
+.business-showcase {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.business-showcase h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.business-images {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.business-images img {
+  width: 400px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.business-images img:hover {
+  transform: scale(1.05);
+}
+
+/* Call to Action Section */
+.cta-section {
+  padding: 60px 20px;
+  background-color: #333;
+  color: white;
+  text-align: center;
+}
+
+.cta-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.cta-section .cta-button {
+  margin-top: 10px;
+}

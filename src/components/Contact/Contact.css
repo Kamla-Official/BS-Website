@@ -1,0 +1,138 @@
+.contact-form, .thank-you {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 40px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    color: white;
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 8px;
+  }
+  
+  .form-group input, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    margin-top: 6px;
+  }
+  
+  .form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+  
+  button {
+    background-color: #ff6347;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    width: 100%;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: #e53e29;
+  }
+  
+  .thank-you {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 40px;
+    background: linear-gradient(135deg, #4CAF50, #66bb6a);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .thank-you h1 {
+    text-align: center;
+    color: white;
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .thank-you p {
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    margin: 20px 0;
+  }
+  
+  .support-id-container {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .support-id {
+    font-size: 26px;
+    font-weight: bold;
+    color: #ff6347;
+    background-color: #fff;
+    padding: 15px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  button {
+    background-color: #ff6347;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    width: 100%;
+    transition: background-color 0.3s ease-in-out;
+    margin-top: 20px;
+  }
+  
+  button:hover {
+    background-color: #e53e29;
+  }
+  
+  .copy-button {
+    margin-top: 15px;
+    background-color: #4CAF50;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+  
+  .copy-button:hover {
+    background-color: #388e3c;
+  }
+  
+  button:focus, .copy-button:focus {
+    outline: none;
+  }
+  

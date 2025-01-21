@@ -22,46 +22,82 @@ const EmployeeList = () => {
     fetchData();
   }, []);
 
+  // Group employees by their role
+  const groupedEmployees = employees.reduce((acc, employee) => {
+    const { role } = employee;
+    if (!acc[role]) {
+      acc[role] = [];
+    }
+    acc[role].push(employee);
+    return acc;
+  }, {});
+
   return (
     <div className="team-section">
-      <h2>Meet the Team</h2>
+      <h2 className="team-title">Meet the Team</h2>
       {loading ? (
-        <p>Loading team data...</p>
+        <p className="loading-text">Loading team data...</p>
       ) : (
-        <div className="team-row">
-          {employees.map((employee, index) => (
-            <div key={index} className="team-card">
-              <div className="card-image">
-                <img
-                  src={employee.image_url || "https://via.placeholder.com/120"}
-                  alt={employee.name}
-                />
-              </div>
-              <div className="card-content">
-                <h3>{employee.role}</h3>
-                <h4>{employee.name}</h4>
-                <p>{employee.description}</p>
-              </div>
-              <div className="social-links">
-                {employee.linkedin && (
-                  <a href={employee.linkedin} className="social-icon" target="_blank" rel="noopener noreferrer">
-                    <i className="fab fa-linkedin"></i>
-                  </a>
-                )}
-                {employee.twitter && (
-                  <a href={employee.twitter} className="social-icon" target="_blank" rel="noopener noreferrer">
-                    <i className="fab fa-twitter"></i>
-                  </a>
-                )}
-                {employee.github && (
-                  <a href={employee.github} className="social-icon" target="_blank" rel="noopener noreferrer">
-                    <i className="fab fa-github"></i>
-                  </a>
-                )}
-              </div>
+        Object.keys(groupedEmployees).map((role) => (
+          <div className="role-section" key={role}>
+            <h3 className="role-title">{role}</h3>
+            <div className="team-row">
+              {groupedEmployees[role].map((employee, index) => (
+                <div key={index} className="team-card">
+                  <div className="card-image">
+                    <img
+                      src={employee.image_url || "https://via.placeholder.com/150"}
+                      alt={employee.name}
+                    />
+                  </div>
+                  <div className="card-content">
+                    <h4 className="name">{employee.name}</h4>
+                    <p className="description">
+                      {employee.description || "No description available."}
+                    </p>
+                    {employee.contact && (
+                      <p className="contact">
+                        <i className="fas fa-phone-alt"></i> {employee.contact}
+                      </p>
+                    )}
+                  </div>
+                  <div className="social-links">
+                    {employee.linkedin && (
+                      <a
+                        href={employee.linkedin}
+                        className="social-icon"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <i className="fab fa-linkedin"></i>
+                      </a>
+                    )}
+                    {employee.twitter && (
+                      <a
+                        href={employee.twitter}
+                        className="social-icon"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <i className="fab fa-twitter"></i>
+                      </a>
+                    )}
+                    {employee.github && (
+                      <a
+                        href={employee.github}
+                        className="social-icon"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <i className="fab fa-github"></i>
+                      </a>
+                    )}
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
+          </div>
+        ))
       )}
     </div>
   );
