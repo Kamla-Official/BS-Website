@@ -46,7 +46,7 @@ const EmployeeList = () => {
                 <div key={index} className="team-card">
                   <div className="card-image">
                     <img
-                      src={employee.image_url || "https://via.placeholder.com/150"}
+                      src={employee.image_url || "https://cdn.discordapp.com/attachments/1133163647254925342/1178844098820591717/Screenshot_588-2-1.png?ex=6790da5f&is=678f88df&hm=5ac7d9829861a0f8157347280f3fac5cbb84ff9903bbcd0b76d3d700602d5b8e&"}
                       alt={employee.name}
                     />
                   </div>

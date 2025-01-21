@@ -43,7 +43,7 @@ const FoodMenu = () => {
             <div className="menu-cards">
               {groupedItems[category].map((item, index) => (
                 <div className="menu-card" key={index}>
-                  <img src={item.image_url} alt={item.name} className="menu-img" />
+                  <img src={item.image_url || "https://dynamiccraft-gallery.netlify.app/public/dbs.png"} alt={item.name} className="menu-img" />
                   <div className="menu-info">
                     <h3>{item.name}</h3>
                     <p className="category">{item.catagory}</p>
