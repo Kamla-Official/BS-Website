@@ -34,7 +34,7 @@ const EmployeeList = () => {
 
   return (
     <div className="team-section">
-      <h2 className="team-title">Meet the Team</h2>
+      <h1 className="team-title">Meet the Team</h1>
       {loading ? (
         <p className="loading-text">Loading team data...</p>
       ) : (
