@@ -22,8 +22,8 @@ const Footer = () => {
         </div>
         <div className="footer-section contact">
           <h3>Contact Us</h3>
-          <p>Email: support@dynamicburger.com</p>
-          <p>Phone: +1 123-456-7890</p>
+          <p>Email: support@burger.teamkamla.top</p>
+          <p>Phone: Will be added Soon</p>
           <div className="social-icons">
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="social-icon">
               <i className="fab fa-facebook-f"></i>
