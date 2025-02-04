@@ -53,7 +53,7 @@ const EmployeeList = () => {
                   <div className="card-content">
                     <h4 className="name">{employee.name}</h4>
                     <p className="description">
-                      {employee.description || "No description available."}
+                      {employee.description || "Age nije jaina Loi. Pore janaitasi"}
                     </p>
                     {employee.contact && (
                       <p className="contact">
