@@ -58,7 +58,7 @@ const Contact = () => {
           title: 'New Contact Form Submission',
           fields: [
             { name: 'Name', value: name },
-            { name: 'City', value: city },
+            { name: 'In-City Name', value: city },
             { name: 'Contact', value: contact },
             { name: 'Discord Name', value: discordName },
             { name: 'Discord ID', value: discordId },
